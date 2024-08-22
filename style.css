@@ -1,13 +1,15 @@
+/* Resetando o padding, margin e box sizing padrão */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Importação de fontes, garantindo variedade de opções tipográficas */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Viaoda+Libre&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Viaoda+Libre&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Viaoda+Libre&display=swap');
 
+/* Variáveis para padronizar cores, facilitando mudanças futuras */
 :root{
     --blue: #00C8FF;
     --gray: #3C3C3C;
@@ -15,28 +17,23 @@
     --white: #ffffff;
 }
 
-/* font-family: "JetBrains Mono", monospace; */
-/* font-family: "Poppins", sans-serif; */
-/* font-family: "Roboto", sans-serif; */
-
+/* Configurando as fontes e comportamento geral do documento */
 html{
-    font-size: 62.25%;
+    font-size: 62.25%; /* Definindo base para cálculo de rem */
     font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    color: white;
-    scroll-behavior: smooth;
+    font-optical-sizing: auto; /* Ajuste automático da renderização da fonte */
+    color: white; /* Cor padrão do texto */
+    scroll-behavior: smooth; /* Rolagem suave entre seções */
 }
 
+/* Configuração básica para sessões, usando imagem de fundo */
 section{
     height: 100vh;
     background: url(imagens/background.png);
     background-size: cover;
 }
 
-img{
-    width: 30px;
-}
-
+/* Configurações da barra de navegação, garantindo centralização e espaçamento */
 .nav_container{
     background-color: var(--dark-gray);
     height: 6.5rem;
@@ -48,6 +45,7 @@ img{
     width: 100%;
 }
 
+/* Ícones da navegação, com efeito de rotação ao passar o mouse */
 .nav_icon_container{
     display: flex;
     align-items: center;
@@ -58,17 +56,18 @@ img{
 .nav_icon_container img{
     width: 3.8rem;
     margin-top: 0.3rem;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out; /* Suaviza o efeito de rotação */
 }
 
 .nav_icon_container img:hover{
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Rotaciona o ícone ao passar o mouse */
 }
 
 .nav_icon_container p{
     font-size: 2.2rem;
 }
 
+/* Links da navegação, com hover para destaque */
 .nav_links_container{
     display: flex;
     gap: 5rem;
@@ -85,11 +84,12 @@ img{
 }
 
 .nav_links:hover{
-    background-color: var(--white);
+    background-color: var(--white); /* Destaca o link ao passar o mouse */
     color: var(--dark-gray);
     transition: all 0.2s ease;
 }
 
+/* Conteúdo da página inicial, focado na flexibilidade e organização */
 .home_content_container{
     display: flex;
     flex-direction: column;
@@ -102,6 +102,7 @@ img{
     font-family: "Poppins", sans-serif;
 }
 
+/* Estilização dos textos principais na home */
 .home_h1{
     font-size: 7rem;
     margin-top: 0.2rem;
@@ -111,10 +112,12 @@ img{
     font-size: 4.8rem;
 }
 
+/* Destacando texto com cor diferente */
 .highlight{
     color: var(--blue);
 }
 
+/* Links da home, organizados com espaçamento */
 .home_links_container{
     margin-left: 6rem;
     margin-top: 0.5rem;
@@ -127,6 +130,7 @@ img{
     width: 3.5rem;
 }
 
+/* Fundo de texto com destaque em background */
 .text_background{
     height: 40%;
     display: flex;
@@ -142,6 +146,7 @@ img{
     font-weight: 600;
 }
 
+/* Seção "Sobre" organizada em colunas */
 .about{
     display: flex;
     padding-top: 10rem;
@@ -151,6 +156,7 @@ img{
     margin-left: 6rem;
 }
 
+/* Título e parágrafos na seção "Sobre" */
 .about_title{
     font-size: 4rem;
     margin-bottom: 1.6rem;
@@ -167,6 +173,7 @@ img{
     gap: 15px;
 }
 
+/* Container de imagens na seção "Sobre" */
 .about_img_container{
     width: 50%;
     display: flex;
@@ -184,6 +191,7 @@ img{
     margin-bottom: 0px;
 }
 
+/* Seção de Portfólio com centralização dos elementos */
 .portfolio{
     padding-top: 11rem;
     display: flex;
@@ -192,6 +200,7 @@ img{
     gap: 3.0rem;
 }
 
+/* Texto de introdução na seção Portfólio */
 .portfolio_text_container{
     display: flex;
     flex-direction: column;
@@ -209,6 +218,7 @@ img{
     text-align: center;
 }
 
+/* Cards do portfólio com animação ao passar o mouse */
 .portfolio_cards_container{
     display: flex;
     gap: 2.5rem;
@@ -227,7 +237,7 @@ img{
 }
 
 .portfolio_card:hover{
-    transform: scale(1.1);
+    transform: scale(1.1); /* Aumenta o card ao passar o mouse */
     transition: all 0.2s ease;
 }
 
@@ -240,6 +250,7 @@ img{
     width: 32rem;
 }
 
+/* Seção de Formação organizada em coluna */
 .formation{
     display: flex;
     flex-direction: column;
@@ -247,11 +258,13 @@ img{
     padding-left: 6rem;
 }
 
+/* Título da formação */
 .formation_title{
     font-size: 4rem;
     margin-bottom: 2rem;
 }
 
+/* Lista de itens de formação */
 .formation_list_container{
     list-style: none;
     display: flex;
@@ -266,6 +279,7 @@ img{
     width: 70rem;
 }
 
+/* Seção de contato com centralização dos elementos */
 .contact{
     display: flex;
     flex-direction: column;
@@ -273,12 +287,14 @@ img{
     padding-top: 12rem;
 }
 
+/* Texto da seção de contato */
 .contact_text_container h2{
     font-size: 4rem;
     margin-bottom: 5rem;
     font-weight: 500;
 }
 
+/* Container de informações de contato */
 .contant_info_container{
     display: flex;
 }
@@ -287,6 +303,7 @@ img{
     margin-right: 5rem;
 }
 
+/* Container de conteúdos de contato */
 .contact_content_container{
     display: flex;
     align-items: center;
@@ -302,6 +319,7 @@ img{
     font-size: 2.5rem;
 }
 
+/* Ícones de contato organizados com espaçamento */
 .contant_icons_container{
     display: flex;
     gap: 2rem;
@@ -311,6 +329,7 @@ img{
     width: 3.8rem;
 }
 
+/* Formulário de chat na seção de contato */
 .contact_chat_container{
     display: flex;
     flex-direction: column;
