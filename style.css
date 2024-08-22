@@ -1,0 +1,334 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Viaoda+Libre&display=swap');
+
+:root{
+    --blue: #00C8FF;
+    --gray: #3C3C3C;
+    --dark-gray: #161616;
+    --white: #ffffff;
+}
+
+/* font-family: "JetBrains Mono", monospace; */
+/* font-family: "Poppins", sans-serif; */
+/* font-family: "Roboto", sans-serif; */
+
+html{
+    font-size: 62.25%;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+section{
+    height: 100vh;
+    background: url(imagens/abstract-lines-dark-4k-mg\ 1\ \(1\).png);
+    background-size: cover;
+}
+
+img{
+    width: 30px;
+}
+
+.nav_container{
+    background-color: var(--dark-gray);
+    height: 6.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "JetBrains Mono", monospace;
+    position: fixed;
+    width: 100%;
+}
+
+.nav_icon_container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 6rem;
+}
+
+.nav_icon_container img{
+    width: 3.8rem;
+    margin-top: 0.3rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.nav_icon_container img:hover{
+    transform: rotate(360deg);
+}
+
+.nav_icon_container p{
+    font-size: 2.2rem;
+}
+
+.nav_links_container{
+    display: flex;
+    gap: 5rem;
+    margin-right: 6rem;
+}
+
+.nav_links{
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--white);
+    padding: 0.7rem 1.3rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.nav_links:hover{
+    background-color: var(--white);
+    color: var(--dark-gray);
+    transition: all 0.2s ease;
+}
+
+.home_content_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 60%;
+}
+
+.home_text_container{
+    margin-left: 6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.home_h1{
+    font-size: 7rem;
+    margin-top: 0.2rem;
+}
+
+.home_p{
+    font-size: 4.8rem;
+}
+
+.highlight{
+    color: var(--blue);
+}
+
+.home_links_container{
+    margin-left: 6rem;
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 3.5rem;
+    margin-top: 1.5rem;
+}
+
+.home_links img{
+    width: 3.5rem;
+}
+
+.text_background{
+    height: 40%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+.text_background p{
+    color: #111111;
+    font-family: "JetBrains Mono", monospace;
+    margin-left: 1rem;
+    font-size: 18rem;
+    font-weight: 600;
+}
+
+.about{
+    display: flex;
+    padding-top: 10rem;
+}
+
+.about_text_container *{
+    margin-left: 6rem;
+}
+
+.about_title{
+    font-size: 4rem;
+    margin-bottom: 1.6rem;
+}
+
+.about_p{
+    font-size: 2rem;
+}
+
+.about_text_container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about_img_container{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.eva{
+    width: 250px;
+}
+
+.walle{
+    width: 450px;
+    margin-left: auto;
+    margin-bottom: 0px;
+}
+
+.portfolio{
+    padding-top: 11rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.0rem;
+}
+
+.portfolio_text_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio_title{
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio_text{
+    font-size: 1.8rem;
+    width: 50%;
+    text-align: center;
+}
+
+.portfolio_cards_container{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.portfolio_card{
+    padding: 1rem;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio_card:hover{
+    transform: scale(1.1);
+    transition: all 0.2s ease;
+}
+
+.image_portfolio{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.image_card3{
+    width: 32rem;
+}
+
+.formation{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10rem;
+    padding-left: 6rem;
+}
+
+.formation_title{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.formation_list_container{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list_item{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid white;
+    width: 70rem;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 12rem;
+}
+
+.contact_text_container h2{
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    font-weight: 500;
+}
+
+.contant_info_container{
+    display: flex;
+}
+
+.contact_info{
+    margin-right: 5rem;
+}
+
+.contact_content_container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 3.5rem;
+}
+
+.contact_content_container img{
+    width: 3.3rem;
+}
+
+.contact_content_container email, p{
+    font-size: 2.5rem;
+}
+
+.contant_icons_container{
+    display: flex;
+    gap: 2rem;
+}
+
+.contant_icons_container img{
+    width: 3.8rem;
+}
+
+.contact_chat_container{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact_chat_container input{
+    width: 30rem;
+    height: 4rem;
+    border: none;
+    border-radius: 1.0rem;
+    padding: 1rem;
+}
+
+.contact_chat_container textarea{
+    width: 30rem;
+    height: 18rem;
+    border: none;
+    border-radius: 1.0rem;
+    padding: 1rem;
+}
